@@ -1,0 +1,545 @@
+/* Revolution Slider 1
+==================== */
+
+#rev_slider_1_1_wrapper{
+    margin:0 auto;
+    background:transparent;
+    padding:0;
+}
+
+/* Slide 1 */
+#slide-1-layer-1 {
+    z-index: 5;
+    text-align: left;
+}
+#slide-1-layer-2{
+    z-index: 6;
+    white-space: nowrap;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-align: left;
+}
+#slide-1-layer-3{
+    z-index: 7;
+    white-space: nowrap;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 300;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-align :left;
+}
+#slide-1-layer-4{
+    z-index: 8;
+    white-space: nowrap;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #DC143C;
+    font-family: "Lato";
+    text-align:left;
+}
+#slide-1-layer-5 {
+    z-index: 9;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: rgba(255,255,255,1);
+    font-family:"Hind";
+    text-transform:uppercase;
+    border-color:rgba(255,255,255,1);
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+/* Slide 2 */
+#slide-3-layer-1{
+    z-index: 10;
+    text-align:left;
+}
+#slide-3-layer-2{
+    z-index: 11;
+    white-space: nowrap;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+}
+#slide-3-layer-3{
+    z-index: 12;
+    white-space: nowrap;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 300;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:left;
+}
+#slide-3-layer-4{
+    z-index: 13;
+    white-space: nowrap;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #DC143C;
+    font-family: "Lato";
+    text-align:left;
+}
+#slide-3-layer-5{
+    z-index: 14;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: rgba(255,255,255,1);
+    font-family:Hind;
+    text-transform:uppercase;
+    border-color:rgba(255,255,255,1);
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+/* Slide 3 */
+#slide-4-layer-1{
+    z-index: 15;
+    text-align:left;
+}
+#slide-4-layer-2{
+    z-index: 16;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+}
+#slide-4-layer-3{
+    z-index: 18;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 300;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+    letter-spacing:4px;
+    text-align:center;
+}
+#slide-4-layer-5{
+    z-index: 19;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family: "Hind";
+    text-transform:uppercase;
+    border-color:#DC143C;
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+#slide-4-layer-6{
+    z-index: 17;
+    white-space: nowrap;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 900;
+    color: #DC143C;
+    font-family: "Lato";
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+
+/* Revolution Slider 2
+==================== */
+
+#rev_slider_3_1_wrapper{
+    margin:0 auto;
+    background:transparent;
+    padding:0;
+}
+/* Slide 1 */
+#slide-6-layer-2{
+    z-index: 6;
+    white-space: nowrap;
+    font-size: 75px;
+    line-height: 75px;
+    font-weight: 900;
+    color: #DC143C;
+    font-family: "Lato";
+    text-transform:uppercase;
+}
+#slide-6-layer-3{
+    z-index: 7;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    color: rgba(255,255,255,1);
+    font-family:"Lato";
+    text-transform:uppercase;
+    text-align:center;
+    letter-spacing:4px;
+}
+#slide-6-layer-4{
+    z-index: 8;
+    white-space: nowrap;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family:"Lato";
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+#slide-6-layer-5{
+    z-index: 9;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: rgba(0,0,0,1);
+    font-family: "Hind";
+    text-transform:uppercase;
+    background-color:rgba(255, 255, 255, 1);
+    border-color:rgba(255, 255, 255, 1);
+    border-style:solid;
+    border-width:2px 2px 2px 2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+
+/* Slide 2 */
+#slide-8-layer-1{
+    z-index: 9;
+    text-align:left;
+}
+#slide-8-layer-2{
+    z-index: 10;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+#slide-8-layer-7{
+    z-index: 11;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family:Lato;
+    text-transform:uppercase;
+    font-style:italic;
+}
+#slide-8-layer-3{
+    z-index: 12;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgba(193,193,193,1);
+    font-family:"Hind";
+    text-align:left;
+}
+#slide-8-layer-6{
+    z-index: 13;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family:"Lato";
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+}
+#slide-8-layer-5{
+    z-index: 14;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family:"Hind";
+    text-transform:uppercase;
+    border-color:#DC143C;
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+/* Slide 3 */
+#slide-9-layer-1{
+    z-index: 15;
+    text-align:left;
+}
+#slide-9-layer-2{
+    z-index: 16;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 100;
+    color: rgba(255,255,255,1);
+    font-family:"Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+#slide-9-layer-3{
+    z-index: 18;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgba(193,193,193,1);
+    font-family: "Hind";
+    text-align:left;
+}
+#slide-9-layer-5{
+    z-index: 20;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family: "Hind";
+    text-transform:uppercase;
+    border-color:#DC143C;
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+#slide-9-layer-6{
+    z-index: 19;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family: "Lato";
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+}
+#slide-9-layer-7{
+    z-index: 17;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family:"Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+
+/* Revolution Slider 3
+==================== */
+#rev_slider_4_1_wrapper{
+    margin:0 auto;
+    background:transparent;
+    padding:0;
+}
+
+/* Slide 1 */
+#slide-12-layer-1{
+    z-index: 5;
+    text-align:left;
+}
+#slide-12-layer-2{
+    z-index: 6;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 100;
+    color: rgba(255,255,255,1);
+    font-family:"Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+#slide-12-layer-5{
+    z-index: 9;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family:"Hind";
+    text-transform:uppercase;
+    border-color:#DC143C;
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;cursor:pointer;
+}
+#slide-12-layer-6{
+    z-index: 8;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family:"Lato";
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+}
+#slide-12-layer-7{
+    z-index: 7;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family:"Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+
+/* Slide 2 */
+#slide-11-layer-1{
+    z-index: 10;
+    text-align:left;
+}
+#slide-11-layer-2{
+    z-index: 11;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+#slide-11-layer-3{
+    z-index: 13;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgba(193,193,193,1);
+    font-family: "Hind";
+    text-align:left;
+}
+#slide-11-layer-5{
+    z-index: 15;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family: "Hind";
+    text-transform:uppercase;
+    border-color:#DC143C;
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+#slide-11-layer-6{
+    z-index: 14;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family:"Lato";
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+}
+#slide-11-layer-7{
+    z-index: 12;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+/* Slide 3 */
+#slide-14-layer-1{
+    z-index: 16;
+    text-align:left;
+}
+#slide-14-layer-2{
+    z-index: 17;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 100;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+#slide-14-layer-5{
+    z-index: 20;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family: "Hind";
+    text-transform:uppercase;
+    border-color:#DC143C;
+    border-style:solid;
+    border-width:2px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+#slide-14-layer-6{
+    z-index: 19;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #DC143C;
+    font-family: "Lato";
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+}
+
+
+
+#slide-14-layer-7{
+    z-index: 18;
+    white-space: nowrap;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 900;
+    color: rgba(255,255,255,1);
+    font-family: "Lato";
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+
+.tp-bannertimer.tp-bottom{
+    visibility: hidden !important;
+}
+

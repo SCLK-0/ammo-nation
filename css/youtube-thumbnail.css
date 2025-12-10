@@ -1,0 +1,115 @@
+/* YouTube Thumbnail Styles */
+.youtube-thumbnail-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.youtube-thumbnail-link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.youtube-thumbnail-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.youtube-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+    overflow: hidden;
+}
+
+.thumbnail-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.youtube-thumbnail-link:hover .thumbnail-image {
+    transform: scale(1.05);
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.youtube-thumbnail-link:hover .play-button-overlay {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.play-button {
+    width: 68px;
+    height: 48px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.youtube-thumbnail-link:hover .play-button {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.play-button svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .youtube-thumbnail-container {
+        margin: 0 -15px;
+    }
+    
+    .play-button {
+        width: 56px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .play-button {
+        width: 48px;
+        height: 34px;
+    }
+}
+
+/* Integration with existing post styles */
+.post_thumb .youtube-thumbnail-container {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.post_featured .youtube-thumbnail-container {
+    width: 100%;
+    max-width: none;
+}
+
+/* Ensure proper spacing in post content */
+.post_content .youtube-thumbnail-container {
+    margin: 20px 0;
+}

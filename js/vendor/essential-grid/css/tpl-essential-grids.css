@@ -1,0 +1,96 @@
+.minimal-light .navigationbuttons,
+.minimal-light .esg-pagination,
+.minimal-light .esg-filters {
+    text-align: center
+}
+
+.minimal-light .esg-filterbutton,
+.minimal-light .esg-navigationbutton,
+.minimal-light .esg-sortbutton,
+.minimal-light .esg-cartbutton a {
+    color: #999;
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 0 16px;
+    border: 1px solid #e5e5e5;
+    line-height: 38px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 5px
+}
+
+.eg-washington-kingler-element-1 {
+    font-size: 18px !important;
+    line-height: 46px !important;
+    color: #fea526 !important;
+    font-weight: 400 !important;
+    padding: 0 10px!important;
+    border-radius: 0 !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+    z-index: 2 !important;
+    display: block;
+    border: 2px solid #fea526 !important;
+}
+
+.eg-washington-kingler-element-1-a {
+    display: inline-block !important;
+    float: none !important;
+    clear: none !important;
+    margin: 0 !important;
+    position: relative !important
+}
+
+.eg-washington-kingler-container {
+    background-color: rgba(0, 0, 0, 0.70)
+}
+
+.eg-washington-kingler-content {
+    background-color: #ffffff;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    border-color: transparent;
+    border-style: double;
+    text-align: left
+}
+
+.esg-grid .mainul li.eg-washington-kingler-wrapper {
+    background-color: #000000;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    border-color: transparent;
+    border-style: none
+}
+
+.esg-grid .mainul li.eg-washington-kingler-wrapper .esg-media-poster {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+#esg-grid-1-1, #esg-grid-2-1, #esg-grid-3-1, #esg-grid-4-1{
+    background-color: transparent;
+    padding: 0;
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+}
+
+.esg-filters.esg-singlefilters{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.esg-fgc-1, .esg-fgc-2, .esg-fgc-3, .esg-fgc-4{
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+

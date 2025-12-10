@@ -1,0 +1,373 @@
+/* Meet the Team Section */
+.meet_team_section {
+    background-color: #121215;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Removed background overlay to show clean header color */
+
+.meet_team_section .content_wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.meet_team_section h2 {
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+.meet_team_section .sc_item_descr {
+    color: #ccc;
+    margin-bottom: 2em;
+}
+
+/* Team Cards Container */
+.team_cards_container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.team_cards_wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0 40px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    /* Ultra-smooth scrolling for all devices */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    
+    /* Desktop scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #dc143c rgba(255, 255, 255, 0.2);
+    
+    /* Desktop cursor */
+    cursor: grab;
+    user-select: none;
+    
+    /* Performance optimizations for smooth scrolling */
+    will-change: scroll-position;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.team_cards_wrapper:active {
+    cursor: grabbing;
+}
+
+.team_card {
+    scroll-snap-align: start; /* Snap alignment */
+}
+
+/* Custom scrollbar for webkit browsers */
+.team_cards_wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.team_cards_wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.team_cards_wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #dc143c, #ff4569);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.team_cards_wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #ff4569, #dc143c);
+}
+
+/* Individual Team Card */
+.team_card {
+    flex: 0 0 300px;
+    min-width: 300px;
+    max-width: 300px;
+    width: 300px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.team_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Team Card Image */
+.team_card_image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.team_card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Red overlay appears on hover/click */
+.team_card_image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(220, 20, 60, 0.4);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.team_card:hover .team_card_image img,
+.team_card:active .team_card_image img {
+    transform: scale(1.1);
+}
+
+/* Show red overlay on hover/click */
+.team_card:hover .team_card_image::before,
+.team_card:active .team_card_image::before {
+    opacity: 1;
+}
+
+/* Team Card Overlay */
+.team_card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(220, 20, 60, 0.4), rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team_card:hover .team_card_overlay {
+    opacity: 1;
+}
+
+/* Social Media Icons */
+.team_social {
+    display: flex;
+    gap: 15px;
+}
+
+.team_social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.team_social a:hover {
+    background: #fff;
+    color: #dc143c;
+    transform: scale(1.1);
+}
+
+/* Team Card Info */
+.team_card_info {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.team_name {
+    font-family: "Lato", sans-serif !important;
+    font-size: 1.6em !important;
+    font-weight: 900 !important;
+    color: #000000 !important;
+    margin: 0 0 8px 0 !important;
+    text-shadow: none !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Force black color with higher specificity */
+.team_card .team_card_info .team_name,
+.team_card_info h4.team_name {
+    color: #000000 !important;
+}
+
+.team_role {
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #dc143c;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0 0 15px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team_description {
+    font-family: "Hind", sans-serif;
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Scroll indicator hint - REMOVED */
+
+/* Scroll hint animation - DISABLED */
+.team_cards_container {
+    position: relative;
+}
+
+/* Removed the gradient scroll hint that was causing the pink overlay */
+
+@keyframes scrollHint {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+/* Mobile Responsive - Pure CSS Smooth Scrolling */
+@media (max-width: 768px) {
+    .team_cards_wrapper {
+        /* CRITICAL: Pure CSS mobile scrolling */
+        -webkit-overflow-scrolling: touch !important;
+        overflow-x: scroll !important;
+        overflow-y: hidden !important;
+        
+        /* Remove ALL scroll behavior overrides */
+        scroll-behavior: auto !important;
+        
+        /* Snap scrolling for better UX */
+        scroll-snap-type: x mandatory !important;
+        
+        /* Mobile optimizations */
+        gap: 20px !important;
+        padding: 15px 20px 30px 20px !important;
+        
+        /* Show scrollbar on mobile */
+        scrollbar-width: thin !important;
+        scrollbar-color: #dc143c rgba(255, 255, 255, 0.2) !important;
+        
+        /* Touch optimizations */
+        touch-action: pan-x !important;
+        
+        /* Remove cursor and user-select on mobile */
+        cursor: default !important;
+        user-select: auto !important;
+        
+        /* Performance optimizations */
+        will-change: scroll-position !important;
+        transform: translate3d(0, 0, 0) !important;
+        
+        /* Remove any transitions that might interfere */
+        transition: none !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar {
+        display: block !important;
+        width: auto !important;
+        height: 8px !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 10px !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #dc143c, #ff4569) !important;
+        border-radius: 10px !important;
+        transition: background 0.3s ease !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, #ff4569, #dc143c) !important;
+    }
+    
+    .team_card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        
+        /* Snap alignment */
+        scroll-snap-align: start !important;
+        scroll-snap-stop: normal !important;
+        
+        /* Allow normal text selection */
+        -webkit-user-select: auto !important;
+        -moz-user-select: auto !important;
+        -ms-user-select: auto !important;
+        user-select: auto !important;
+        
+        /* Keep smooth hover effects */
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        
+        /* Performance */
+        transform: translate3d(0, 0, 0) !important;
+        backface-visibility: hidden !important;
+        
+        /* Remove tap highlights */
+        -webkit-tap-highlight-color: transparent !important;
+    }
+    
+    .team_card_image {
+        height: 250px;
+    }
+    
+    .team_card_info {
+        padding: 20px 15px;
+    }
+    
+    .team_name {
+        font-size: 1.2em;
+    }
+    
+    .team_role {
+        font-size: 0.8em;
+    }
+    
+    .team_description {
+        font-size: 0.8em;
+    }
+    
+    /* Scroll hint removed */
+    
+    /* Fade animation for hint */
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+    }
+    
+    .scroll-indicators {
+        animation: fadeInOut 4s infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .team_card {
+        flex: 0 0 250px;
+    }
+    
+    .team_cards_wrapper {
+        gap: 15px;
+    }
+}
+/* Removed ::after - "//" will be added directly to description text */

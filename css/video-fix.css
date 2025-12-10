@@ -1,0 +1,86 @@
+/* YouTube Video Fix */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive-16by9 {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+/* Ensure video is visible on all devices */
+.post_featured .embed-responsive,
+.post_featured .embed-responsive-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Mobile video adjustments */
+@media (max-width: 768px) {
+    .embed-responsive-16by9 {
+        padding-bottom: 56.25%;
+        margin: 10px 0;
+    }
+    
+    .embed-responsive-item {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* Fix for video player configuration errors */
+.post_featured iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+@media (min-width: 769px) {
+    .post_featured iframe {
+        min-height: 400px;
+    }
+}/
+* Additional YouTube Error 153 Fixes */
+.embed-responsive iframe {
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+/* Ensure proper iframe loading */
+iframe[src*="youtube.com"] {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* Fix for CORS and embedding issues - sandbox removed to prevent restrictions */
+
+/* Fallback for video loading issues */
+.embed-responsive::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

@@ -1,0 +1,1404 @@
+/* Mobile Fix CSS - Ensure Product Gallery Visibility */
+
+/* CRITICAL FOOTER FIX - MAXIMUM PRIORITY LEFT ALIGNMENT */
+@media screen and (max-width: 768px) {
+    /* Ultra high specificity footer alignment fix */
+    body .footer_wrap .widget_area .widget ul li,
+    body .footer_wrap .widget_area .widget ul li *,
+    body .footer_wrap .widget_area .widget .product_list_widget li,
+    body .footer_wrap .widget_area .widget .product_list_widget li *,
+    body .footer_wrap .widget_area .widget h4,
+    body .footer_wrap .widget_area .widget h5,
+    body .footer_wrap .widget_area .widget a,
+    body .footer_wrap .widget_area .widget span,
+    body .footer_wrap .widget_area .widget div,
+    body .footer_wrap .widget_area .widget p {
+        text-align: left !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        float: none !important;
+        display: block !important;
+    }
+    
+    /* Force widget containers to be left-aligned */
+    body .footer_wrap .widget_area .widget {
+        text-align: left !important;
+    }
+    
+    /* Specific widget content fixes */
+    body .footer_wrap .widget_area .widget ul {
+        text-align: left !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        list-style: none !important;
+    }
+    
+    /* Product items in widgets */
+    body .footer_wrap .widget_area .widget ul li {
+        text-align: left !important;
+        padding: 5px 0 !important;
+        margin: 0 !important;
+        border-bottom: 1px solid #333 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Product links and titles */
+    body .footer_wrap .widget_area .widget ul li a {
+        text-align: left !important;
+        color: #fff !important;
+        font-size: 13px !important;
+        text-decoration: none !important;
+        display: block !important;
+        margin-bottom: 3px !important;
+    }
+    
+    /* Prices and meta info */
+    body .footer_wrap .widget_area .widget .price,
+    body .footer_wrap .widget_area .widget .amount,
+    body .footer_wrap .widget_area .widget .star-rating,
+    body .footer_wrap .widget_area .widget .reviewer {
+        text-align: left !important;
+        color: #999 !important;
+        font-size: 11px !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+    
+    /* CRITICAL: Widget titles must be left-aligned */
+    body .footer_wrap .widget_area .widget .widget_title,
+    body .footer_wrap .widget_area .widget .widgettitle,
+    body .footer_wrap .widget_area .widget h3,
+    body .footer_wrap .widget_area .widget h4,
+    body .footer_wrap .widget_area .widget h5 {
+        text-align: left !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Override any existing center alignment */
+    body .footer_wrap .widget_area .widget[style*="text-align"],
+    body .footer_wrap .widget_area .widget *[style*="text-align"] {
+        text-align: left !important;
+    }
+    
+    /* Nuclear option for widget titles */
+    html body .footer_wrap .widget_area .widget .widget_title,
+    html body .footer_wrap .widget_area .widget .widgettitle {
+        text-align: left !important;
+    }
+}
+
+/* Force product gallery to be visible - mobile only */
+@media (max-width: 768px) {
+    .woocommerce-product-gallery {
+        opacity: 1 !important;
+        display: block !important;
+        visibility: visible !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .woocommerce-product-gallery__wrapper {
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .woocommerce-product-gallery__image {
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    .woocommerce-product-gallery__image img {
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        opacity: 1 !important;
+    }
+
+    .woocommerce-product-gallery__image a {
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+    .product .images {
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        opacity: 1 !important;
+    }
+    
+    .woocommerce-product-gallery {
+        margin-bottom: 20px !important;
+        min-height: 200px !important;
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .woocommerce-product-gallery__image {
+        min-height: 200px !important;
+        background-color: #fff !important;
+    }
+    
+    .woocommerce-product-gallery__image img {
+        min-height: 200px !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Debug styles removed - gallery is working */
+
+/* Additional mobile image loading fixes */
+@media (max-width: 768px) {
+    .woocommerce-product-gallery__image img {
+        /* Force image to load and display */
+        content-visibility: auto !important;
+        
+        /* Ensure proper rendering */
+        image-rendering: auto !important;
+        image-orientation: from-image !important;
+        
+        /* Force layout */
+        contain: layout style !important;
+        
+        /* Prevent lazy loading issues */
+        will-change: auto !important;
+    }
+    
+    /* Ensure container doesn't collapse */
+    .woocommerce-product-gallery__image {
+        min-width: 200px !important;
+        min-height: 200px !important;
+    }
+    
+    /* Force immediate visibility */
+    .woocommerce-product-gallery,
+    .woocommerce-product-gallery__wrapper,
+    .woocommerce-product-gallery__image,
+    .woocommerce-product-gallery__image img {
+        transform: translateZ(0) !important; /* Force hardware acceleration */
+    }
+}
+
+/* FORCE IMAGE TO SHOW - SIMPLE FIX */
+@media (max-width: 768px) {
+    .woocommerce-product-gallery__image img {
+        background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        min-height: 200px !important;
+        width: 100% !important;
+        height: 200px !important;
+    }
+    
+    /* If image doesn't load, show background */
+    .woocommerce-product-gallery__image {
+        background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        min-height: 200px !important;
+    }
+    
+    /* Nuclear option - force content */
+    .woocommerce-product-gallery__image::before {
+        content: '';
+        display: block !important;
+        width: 100% !important;
+        height: 200px !important;
+        background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 1 !important;
+    }
+}
+
+/* Fix gallery wrapper and image sizing on mobile */
+@media (max-width: 768px) {
+    .woocommerce-product-gallery__wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+    }
+    
+    .woocommerce-product-gallery__image {
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important;
+        margin-right: 0 !important;
+    }
+    
+    .woocommerce-product-gallery__image img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
+    
+    /* Override any flexslider styles that might be interfering */
+    .woocommerce-product-gallery .flex-active-slide {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Ensure the gallery container itself is properly sized */
+    .woocommerce-product-gallery {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+}
+/*
+ TOP PANEL MIDDLE MOBILE FIX */
+@media (max-width: 768px) {
+    /* Fix top panel middle section layout */
+    .top_panel_middle {
+        padding: 10px 0 !important;
+    }
+    
+    .top_panel_middle .content_wrap {
+        padding: 0 15px !important;
+    }
+    
+    .top_panel_middle .columns_wrap {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Logo section */
+    .top_panel_middle .contact_logo {
+        width: 100% !important;
+        float: none !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        padding: 0 !important;
+    }
+    
+    .top_panel_middle .logo {
+        display: inline-block !important;
+        width: auto !important;
+        max-width: 200px !important;
+    }
+    
+    .top_panel_middle .logo img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* Contact fields */
+    .top_panel_middle .contact_field {
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+        padding: 8px 0 !important;
+        border-bottom: 1px solid #eee !important;
+    }
+    
+    .top_panel_middle .contact_field:last-child {
+        border-bottom: none !important;
+    }
+    
+    /* Contact field content */
+    .top_panel_middle .contact_icon {
+        display: inline-block !important;
+        margin-right: 8px !important;
+        vertical-align: middle !important;
+    }
+    
+    .top_panel_middle .contact_label,
+    .top_panel_middle .contact_address_2,
+    .top_panel_middle .contact_email {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin: 0 2px !important;
+    }
+    
+    /* Cart section */
+    .top_panel_middle .contact_cart {
+        position: relative !important;
+    }
+    
+    .top_panel_middle .top_panel_cart_button {
+        display: inline-block !important;
+        padding: 8px 15px !important;
+        background: #f5f5f5 !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+    }
+    
+    /* Hide cart dropdown on mobile to prevent overflow */
+    .top_panel_middle .sidebar_cart {
+        display: none !important;
+    }
+    
+    /* Ensure no floating elements break layout */
+    .top_panel_middle * {
+        box-sizing: border-box !important;
+    }
+    
+    /* Clear any floats */
+    .top_panel_middle .columns_wrap::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .top_panel_middle .contact_field {
+        font-size: 12px !important;
+        padding: 6px 0 !important;
+    }
+    
+    .top_panel_middle .logo {
+        max-width: 150px !important;
+    }
+    
+    .top_panel_middle .contact_label,
+    .top_panel_middle .contact_address_2,
+    .top_panel_middle .contact_email {
+        font-size: 11px !important;
+    }
+}
+/* FOO
+TER MOBILE FIX */
+@media (max-width: 768px) {
+    /* Footer wrapper */
+    .footer_wrap {
+        padding: 20px 0 !important;
+        overflow: hidden !important;
+    }
+    
+    .footer_wrap .content_wrap {
+        padding: 0 15px !important;
+    }
+    
+    /* Widget areas */
+    .footer_wrap .widget_area {
+        width: 100% !important;
+        float: none !important;
+        display: block !important;
+        margin-bottom: 25px !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+    
+    .footer_wrap .widget_area:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Widget titles */
+    .footer_wrap .widget_title,
+    .footer_wrap .widgettitle {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+        padding-bottom: 8px !important;
+        border-bottom: 2px solid #444 !important;
+        text-align: left !important;
+        color: #fff !important;
+        font-weight: bold !important;
+    }
+    
+    /* Widget content */
+    .footer_wrap .widget {
+        margin-bottom: 20px !important;
+        padding: 0 !important;
+    }
+    
+    .footer_wrap .widget p,
+    .footer_wrap .widget div,
+    .footer_wrap .widget span {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+        text-align: left !important;
+        color: #ccc !important;
+    }
+    
+    /* Lists in widgets */
+    .footer_wrap .widget ul,
+    .footer_wrap .widget ol {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+    
+    .footer_wrap .widget li {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 8px !important;
+        padding: 5px 0 !important;
+        border-bottom: 1px solid #333 !important;
+        text-align: left !important;
+    }
+    
+    .footer_wrap .widget li:last-child {
+        border-bottom: none !important;
+    }
+    
+    .footer_wrap .widget li a {
+        display: block !important;
+        color: #ccc !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        padding: 5px 0 !important;
+    }
+    
+    .footer_wrap .widget li a:hover {
+        color: #fff !important;
+        text-decoration: underline !important;
+    }
+    
+    /* Product widgets */
+    .footer_wrap .widget_products .product_item,
+    .footer_wrap .widget_recent_entries .post-item,
+    .footer_wrap .widget_recent_reviews .review_item {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        padding: 10px !important;
+        background: rgba(255,255,255,0.05) !important;
+        border-radius: 4px !important;
+        text-align: left !important;
+    }
+    
+    .footer_wrap .widget_products .product_item img,
+    .footer_wrap .widget_recent_entries .post-item img,
+    .footer_wrap .widget_recent_reviews .review_item img {
+        max-width: 60px !important;
+        height: auto !important;
+        float: left !important;
+        margin-right: 10px !important;
+        border-radius: 3px !important;
+    }
+    
+    .footer_wrap .widget_products .product_item .product_title,
+    .footer_wrap .widget_recent_entries .post-item .post_title,
+    .footer_wrap .widget_recent_reviews .review_item .review_title,
+    .footer_wrap .widget_products .product_item h4,
+    .footer_wrap .widget_recent_entries .post-item h4,
+    .footer_wrap .widget_recent_reviews .review_item h4,
+    .footer_wrap .widget_products .product_item a,
+    .footer_wrap .widget_recent_entries .post-item a,
+    .footer_wrap .widget_recent_reviews .review_item a {
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+        color: #fff !important;
+        margin-bottom: 5px !important;
+        text-align: left !important;
+        display: block !important;
+        text-decoration: none !important;
+    }
+    
+    .footer_wrap .widget_products .product_item .product_price,
+    .footer_wrap .widget_recent_entries .post-item .post_date,
+    .footer_wrap .widget_recent_reviews .review_item .reviewer_name,
+    .footer_wrap .widget_recent_reviews .review_item .review_rating {
+        font-size: 12px !important;
+        color: #999 !important;
+        text-align: left !important;
+        display: block !important;
+        margin-bottom: 3px !important;
+    }
+    
+    /* Specific fixes for review widgets */
+    .footer_wrap .widget_recent_reviews .review_item .review_author,
+    .footer_wrap .widget_recent_reviews .review_item .review_text,
+    .footer_wrap .widget_recent_reviews .review_item .review_meta {
+        text-align: left !important;
+        color: #ccc !important;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Social icons */
+    .footer_wrap .social_item {
+        display: inline-block !important;
+        margin: 0 5px 10px 5px !important;
+        padding: 8px !important;
+        background: rgba(255,255,255,0.1) !important;
+        border-radius: 50% !important;
+        width: 40px !important;
+        height: 40px !important;
+        text-align: center !important;
+        line-height: 24px !important;
+    }
+    
+    .footer_wrap .social_item a {
+        color: #ccc !important;
+        font-size: 16px !important;
+        text-decoration: none !important;
+    }
+    
+    .footer_wrap .social_item:hover {
+        background: rgba(255,255,255,0.2) !important;
+    }
+    
+    .footer_wrap .social_item:hover a {
+        color: #fff !important;
+    }
+    
+    /* Contact info */
+    .footer_wrap .contact_info {
+        text-align: center !important;
+    }
+    
+    .footer_wrap .contact_info .contact_item {
+        display: block !important;
+        margin-bottom: 10px !important;
+        padding: 8px 0 !important;
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .footer_wrap .contact_info .contact_item:last-child {
+        border-bottom: none !important;
+    }
+    
+    .footer_wrap .contact_info .contact_icon {
+        display: inline-block !important;
+        margin-right: 8px !important;
+        color: #999 !important;
+        font-size: 14px !important;
+    }
+    
+    .footer_wrap .contact_info .contact_label {
+        color: #ccc !important;
+        font-size: 14px !important;
+    }
+    
+    /* Clear floats */
+    .footer_wrap .widget::after,
+    .footer_wrap .widget_area::after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+    
+    /* Ensure proper box sizing */
+    .footer_wrap * {
+        box-sizing: border-box !important;
+    }
+}
+
+/* Extra small screens - footer */
+@media (max-width: 480px) {
+    .footer_wrap {
+        padding: 15px 0 !important;
+    }
+    
+    .footer_wrap .widget_title,
+    .footer_wrap .widgettitle {
+        font-size: 14px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .footer_wrap .widget p,
+    .footer_wrap .widget div,
+    .footer_wrap .widget span,
+    .footer_wrap .widget li a {
+        font-size: 12px !important;
+    }
+    
+    .footer_wrap .widget_area {
+        margin-bottom: 20px !important;
+    }
+    
+    .footer_wrap .social_item {
+        width: 35px !important;
+        height: 35px !important;
+        line-height: 19px !important;
+        margin: 0 3px 8px 3px !important;
+    }
+    
+    .footer_wrap .social_item a {
+        font-size: 14px !important;
+    }
+}
+
+/* CLEAN FOOTER WIDGET LAYOUT - LEFT ALIGNED LIKE DESKTOP */
+@media (max-width: 768px) {
+    /* Ensure all footer content is left-aligned */
+    .footer_wrap .widget,
+    .footer_wrap .widget * {
+        text-align: left !important;
+    }
+    
+    /* Product/Review items should look like desktop version */
+    .footer_wrap .widget .product_item,
+    .footer_wrap .widget .review_item,
+    .footer_wrap .widget .post_item {
+        display: flex !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        padding: 8px 0 !important;
+        border-bottom: 1px solid #333 !important;
+        margin-bottom: 8px !important;
+        background: none !important;
+    }
+    
+    .footer_wrap .widget .product_item:last-child,
+    .footer_wrap .widget .review_item:last-child,
+    .footer_wrap .widget .post_item:last-child {
+        border-bottom: none !important;
+    }
+    
+    /* Product images */
+    .footer_wrap .widget .product_item img,
+    .footer_wrap .widget .review_item img,
+    .footer_wrap .widget .post_item img {
+        width: 50px !important;
+        height: 50px !important;
+        object-fit: cover !important;
+        margin-right: 10px !important;
+        flex-shrink: 0 !important;
+        border-radius: 3px !important;
+    }
+    
+    /* Product content */
+    .footer_wrap .widget .product_item .product_content,
+    .footer_wrap .widget .review_item .review_content,
+    .footer_wrap .widget .post_item .post_content {
+        flex: 1 !important;
+        text-align: left !important;
+    }
+    
+    /* Product titles */
+    .footer_wrap .widget .product_item a,
+    .footer_wrap .widget .review_item a,
+    .footer_wrap .widget .post_item a,
+    .footer_wrap .widget h4,
+    .footer_wrap .widget h5 {
+        color: #fff !important;
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 3px !important;
+        text-decoration: none !important;
+        display: block !important;
+    }
+    
+    /* Prices and meta info */
+    .footer_wrap .widget .product_price,
+    .footer_wrap .widget .review_rating,
+    .footer_wrap .widget .post_date {
+        color: #999 !important;
+        font-size: 11px !important;
+        margin-bottom: 2px !important;
+    }
+    
+    /* Star ratings */
+    .footer_wrap .widget .star-rating {
+        font-size: 12px !important;
+        color: #ffa500 !important;
+    }
+}/* FORCE
+ ALL FOOTER CONTENT LEFT ALIGNMENT - OVERRIDE ALL CENTER ALIGNMENT */
+@media (max-width: 768px) {
+    /* Nuclear option - force everything in footer to be left-aligned */
+    .footer_wrap,
+    .footer_wrap *,
+    .footer_wrap .widget,
+    .footer_wrap .widget *,
+    .footer_wrap .widget_area,
+    .footer_wrap .widget_area *,
+    .footer_wrap .widget_title,
+    .footer_wrap .widgettitle,
+    .footer_wrap .widget_content,
+    .footer_wrap .widget_content *,
+    .footer_wrap ul,
+    .footer_wrap ul *,
+    .footer_wrap li,
+    .footer_wrap li *,
+    .footer_wrap p,
+    .footer_wrap span,
+    .footer_wrap div,
+    .footer_wrap a,
+    .footer_wrap h1,
+    .footer_wrap h2,
+    .footer_wrap h3,
+    .footer_wrap h4,
+    .footer_wrap h5,
+    .footer_wrap h6 {
+        text-align: left !important;
+    }
+    
+    /* Specific widget content fixes */
+    .footer_wrap .widget_recent_entries,
+    .footer_wrap .widget_recent_reviews,
+    .footer_wrap .widget_products,
+    .footer_wrap .widget_top_rated_products,
+    .footer_wrap .widget_recent_products {
+        text-align: left !important;
+    }
+    
+    .footer_wrap .widget_recent_entries *,
+    .footer_wrap .widget_recent_reviews *,
+    .footer_wrap .widget_products *,
+    .footer_wrap .widget_top_rated_products *,
+    .footer_wrap .widget_recent_products * {
+        text-align: left !important;
+    }
+    
+    /* Product and review items - ensure left alignment */
+    .footer_wrap .product_list_widget,
+    .footer_wrap .product_list_widget *,
+    .footer_wrap .mini_cart_item,
+    .footer_wrap .mini_cart_item *,
+    .footer_wrap .woocommerce-mini-cart,
+    .footer_wrap .woocommerce-mini-cart * {
+        text-align: left !important;
+    }
+    
+    /* Product titles and links */
+    .footer_wrap .product_list_widget li a,
+    .footer_wrap .mini_cart_item a,
+    .footer_wrap .widget_products a,
+    .footer_wrap .widget_recent_reviews a {
+        text-align: left !important;
+        display: block !important;
+    }
+    
+    /* Prices and ratings */
+    .footer_wrap .woocommerce-Price-amount,
+    .footer_wrap .amount,
+    .footer_wrap .price,
+    .footer_wrap .star-rating,
+    .footer_wrap .rating {
+        text-align: left !important;
+        display: block !important;
+    }
+    
+    /* Review content */
+    .footer_wrap .review_item .reviewer,
+    .footer_wrap .review_item .review_author,
+    .footer_wrap .review_item .review_text,
+    .footer_wrap .review_item .review_rating {
+        text-align: left !important;
+    }
+    
+    /* Override any center or right alignment */
+    .footer_wrap [style*="text-align: center"],
+    .footer_wrap [style*="text-align: right"] {
+        text-align: left !important;
+    }
+    
+    /* Ensure list items are properly aligned */
+    .footer_wrap .widget ul li {
+        text-align: left !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    .footer_wrap .widget ul li * {
+        text-align: left !important;
+    }
+}
+
+/* SPECIFIC WIDGET TYPE FIXES */
+@media (max-width: 768px) {
+    /* Latest Products Widget */
+    .footer_wrap .widget_recent_products ul li,
+    .footer_wrap .widget_products ul li {
+        display: block !important;
+        text-align: left !important;
+        padding: 5px 0 !important;
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .footer_wrap .widget_recent_products ul li a,
+    .footer_wrap .widget_products ul li a {
+        color: #fff !important;
+        text-decoration: none !important;
+        font-size: 13px !important;
+        text-align: left !important;
+        display: block !important;
+        margin-bottom: 3px !important;
+    }
+    
+    .footer_wrap .widget_recent_products .price,
+    .footer_wrap .widget_products .price {
+        color: #999 !important;
+        font-size: 11px !important;
+        text-align: left !important;
+        display: block !important;
+    }
+    
+    /* Top Rated Products Widget */
+    .footer_wrap .widget_top_rated_products ul li {
+        display: block !important;
+        text-align: left !important;
+        padding: 5px 0 !important;
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .footer_wrap .widget_top_rated_products ul li a {
+        color: #fff !important;
+        text-decoration: none !important;
+        font-size: 13px !important;
+        text-align: left !important;
+        display: block !important;
+        margin-bottom: 3px !important;
+    }
+    
+    .footer_wrap .widget_top_rated_products .star-rating {
+        text-align: left !important;
+        color: #ffa500 !important;
+        font-size: 12px !important;
+        margin-bottom: 3px !important;
+    }
+    
+    /* Recent Reviews Widget */
+    .footer_wrap .widget_recent_reviews ul li {
+        display: block !important;
+        text-align: left !important;
+        padding: 5px 0 !important;
+        border-bottom: 1px solid #333 !important;
+    }
+    
+    .footer_wrap .widget_recent_reviews ul li a {
+        color: #fff !important;
+        text-decoration: none !important;
+        font-size: 13px !important;
+        text-align: left !important;
+        display: block !important;
+        margin-bottom: 3px !important;
+    }
+    
+    .footer_wrap .widget_recent_reviews .reviewer {
+        color: #999 !important;
+        font-size: 11px !important;
+        text-align: left !important;
+        display: block !important;
+    }
+    
+    .footer_wrap .widget_recent_reviews .star-rating {
+        text-align: left !important;
+        color: #ffa500 !important;
+        font-size: 12px !important;
+    }
+}/*
+ ULTIMATE FOOTER TITLE FIX - HIGHEST PRIORITY */
+@media screen and (max-width: 768px) {
+    /* Maximum specificity for widget titles */
+    html body div.footer_wrap div.widget_area div.widget h3.widget_title,
+    html body div.footer_wrap div.widget_area div.widget h4.widget_title,
+    html body div.footer_wrap div.widget_area div.widget h5.widget_title,
+    html body div.footer_wrap div.widget_area div.widget .widget_title,
+    html body div.footer_wrap div.widget_area div.widget .widgettitle,
+    html body .footer_wrap .widget_area .widget .widget_title,
+    html body .footer_wrap .widget_area .widget .widgettitle {
+        text-align: left !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        position: relative !important;
+    }
+    
+    /* Target specific widget title text content */
+    .footer_wrap .widget_title:before,
+    .footer_wrap .widget_title:after,
+    .footer_wrap .widgettitle:before,
+    .footer_wrap .widgettitle:after {
+        display: none !important;
+    }
+    
+    /* Force all footer content containers */
+    .footer_wrap .widget_area,
+    .footer_wrap .widget,
+    .footer_wrap .widget_content {
+        text-align: left !important;
+    }
+    
+    /* Override theme-specific classes that might center content */
+    .footer_wrap .center,
+    .footer_wrap .centered,
+    .footer_wrap .text-center,
+    .footer_wrap .align-center {
+        text-align: left !important;
+    }
+}/* TEAM S
+ECTION MOBILE SCROLLING FIX */
+@media (max-width: 768px) {
+    /* Optimize team section for mobile touch */
+    .meet_team_section {
+        overflow-x: hidden !important;
+        position: relative !important;
+    }
+    
+    .team_cards_container {
+        overflow: visible !important;
+        position: relative !important;
+    }
+    
+    .team_cards_wrapper {
+        /* Ultra-smooth mobile scrolling */
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        
+        /* Snap scrolling for better UX */
+        scroll-snap-type: x mandatory !important;
+        
+        /* Remove scrollbar completely on mobile */
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        
+        /* Optimize for touch */
+        touch-action: pan-x !important;
+        
+        /* Smooth momentum */
+        scroll-padding: 0 20px !important;
+        
+        /* Better performance */
+        will-change: scroll-position !important;
+        transform: translateZ(0) !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+    
+    .team_card {
+        /* Snap alignment */
+        scroll-snap-align: start !important;
+        scroll-snap-stop: normal !important;
+        
+        /* Prevent selection during scroll */
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        
+        /* Smooth transitions */
+        transition: transform 0.2s ease-out !important;
+        
+        /* Better touch response */
+        -webkit-tap-highlight-color: transparent !important;
+        
+        /* Optimize rendering */
+        transform: translateZ(0) !important;
+        backface-visibility: hidden !important;
+    }
+    
+    /* Improve touch responsiveness */
+    .team_card * {
+        pointer-events: auto !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+    
+    /* Scroll indicators positioning */
+    .scroll-indicator {
+        position: absolute !important;
+        z-index: 100 !important;
+        pointer-events: none !important;
+    }
+    
+    /* Better spacing on mobile */
+    .team_cards_wrapper {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Optimize card sizing for better scrolling */
+    .team_card {
+        min-width: 280px !important;
+        max-width: 280px !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .team_cards_wrapper {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        gap: 15px !important;
+    }
+    
+    .team_card {
+        min-width: 250px !important;
+        max-width: 250px !important;
+        flex: 0 0 250px !important;
+    }
+    
+    /* Adjust scroll hint text */
+    .team_cards_container::after {
+        font-size: 0.75em !important;
+        padding: 0 10px !important;
+    }
+}/*
+ TEAM SECTION PURE CSS MOBILE SCROLLING - OVERRIDE ALL */
+@media (max-width: 768px) {
+    /* Ensure container doesn't interfere */
+    body .meet_team_section {
+        overflow: visible !important;
+    }
+    
+    body .team_cards_container {
+        overflow: visible !important;
+        position: relative !important;
+    }
+    
+    /* CRITICAL: Pure native scrolling - no JavaScript interference */
+    body .team_cards_wrapper {
+        /* Native iOS/Android momentum scrolling */
+        -webkit-overflow-scrolling: touch !important;
+        
+        /* Remove any scroll-behavior that might interfere */
+        scroll-behavior: auto !important;
+        
+        /* Pure horizontal scrolling */
+        overflow-x: scroll !important;
+        overflow-y: hidden !important;
+        
+        /* Touch action for horizontal only */
+        touch-action: pan-x !important;
+        
+        /* Remove ALL transitions and animations that cause choppiness */
+        transition: none !important;
+        animation: none !important;
+        
+        /* Hardware acceleration without interference */
+        transform: translate3d(0, 0, 0) !important;
+        will-change: scroll-position !important;
+        
+        /* Show scrollbar */
+        scrollbar-width: thin !important;
+        scrollbar-color: #dc143c rgba(255, 255, 255, 0.2) !important;
+        
+        /* Remove cursor changes */
+        cursor: default !important;
+    }
+    
+    body .team_cards_wrapper::-webkit-scrollbar {
+        display: block !important;
+        height: 8px !important;
+    }
+    
+    body .team_cards_wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 10px !important;
+    }
+    
+    body .team_cards_wrapper::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #dc143c, #ff4569) !important;
+        border-radius: 10px !important;
+        transition: background 0.3s ease !important;
+    }
+    
+    body .team_cards_wrapper::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, #ff4569, #dc143c) !important;
+    }
+    
+    body .team_card {
+        /* Same size as desktop - prevent stretching */
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        width: 300px !important;
+        height: auto !important;
+        
+        /* Hardware acceleration */
+        transform: translate3d(0, 0, 0) !important;
+        backface-visibility: hidden !important;
+        
+        /* Remove tap highlights */
+        -webkit-tap-highlight-color: transparent !important;
+        
+        /* Allow normal text selection */
+        -webkit-user-select: auto !important;
+        -moz-user-select: auto !important;
+        -ms-user-select: auto !important;
+        user-select: auto !important;
+        
+        /* Keep hover transitions but make them fast */
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    
+    /* Keep hover effects but optimize for mobile */
+    body .team_card:hover {
+        transform: translateY(-5px) translate3d(0, 0, 0) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    
+    body .team_card:hover .team_card_image img {
+        transform: scale(1.05) !important;
+        transition: transform 0.2s ease !important;
+    }
+    
+    body .team_card:hover .team_card_overlay {
+        opacity: 1 !important;
+        transition: opacity 0.2s ease !important;
+    }
+    
+    body .team_card:hover .team_card_image::before {
+        opacity: 1 !important;
+        transition: opacity 0.2s ease !important;
+    }
+    
+    /* Mobile tap effects (since hover doesn't work well on touch) */
+    body .team_card:active {
+        transform: translateY(-3px) translate3d(0, 0, 0) !important;
+        transition: transform 0.1s ease !important;
+    }
+    
+    body .team_card:active .team_card_overlay {
+        opacity: 1 !important;
+        transition: opacity 0.1s ease !important;
+    }
+    
+    body .team_card:active .team_card_image::before {
+        opacity: 1 !important;
+        transition: opacity 0.1s ease !important;
+    }
+}/* REST
+ORE TEAM CARD VISUAL EFFECTS ON MOBILE */
+@media (max-width: 768px) {
+    /* Ensure card maintains proper aspect ratio */
+    body .team_card {
+        border-radius: 15px !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+        background: #f5f5f5 !important;
+        position: relative !important;
+    }
+    
+    /* Card image container */
+    body .team_card_image {
+        position: relative !important;
+        height: 250px !important;
+        overflow: hidden !important;
+    }
+    
+    body .team_card_image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    /* Red overlay on image */
+    body .team_card_image::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background-color: rgba(220, 20, 60, 0.4) !important;
+        z-index: 1 !important;
+        opacity: 0 !important;
+        transition: opacity 0.3s ease !important;
+        pointer-events: none !important;
+    }
+    
+    /* Team card overlay with social icons */
+    body .team_card_overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: linear-gradient(45deg, rgba(220, 20, 60, 0.4), rgba(0, 0, 0, 0.7)) !important;
+        opacity: 0 !important;
+        transition: opacity 0.3s ease !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 2 !important;
+    }
+    
+    /* Social media icons */
+    body .team_social {
+        display: flex !important;
+        gap: 15px !important;
+    }
+    
+    body .team_social a {
+        width: 40px !important;
+        height: 40px !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        border: 2px solid rgba(255, 255, 255, 0.5) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #fff !important;
+        font-size: 16px !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+    }
+    
+    body .team_social a:hover {
+        background: #fff !important;
+        color: #dc143c !important;
+        transform: scale(1.1) !important;
+    }
+    
+    /* Card info section */
+    body .team_card_info {
+        padding: 25px 20px !important;
+        text-align: center !important;
+        background: #f5f5f5 !important;
+    }
+    
+    /* Team member name - same as desktop */
+    body .team_name,
+    body .team_card .team_card_info .team_name,
+    body .team_card_info h4.team_name {
+        font-family: "Lato", sans-serif !important;
+        font-size: 1.6em !important;
+        font-weight: 900 !important;
+        color: #000000 !important;
+        margin: 0 0 8px 0 !important;
+        text-shadow: none !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    /* Team role - same as desktop */
+    body .team_role {
+        font-family: "Lato", sans-serif !important;
+        font-size: 1em !important;
+        font-weight: 700 !important;
+        color: #dc143c !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.2px !important;
+        margin: 0 0 15px 0 !important;
+    }
+    
+    /* Team description - same as desktop */
+    body .team_description {
+        font-family: "Hind", sans-serif !important;
+        font-size: 0.9em !important;
+        color: #333 !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+        font-weight: 500 !important;
+    }
+}
+
+/* Extra small screens - same size as desktop */
+@media (max-width: 480px) {
+    body .team_card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        width: 300px !important;
+    }
+    
+    body .team_card_info {
+        padding: 25px 20px !important;
+    }
+    
+    /* Adjust wrapper padding for smaller screens */
+    body .team_cards_wrapper {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}/* DESKTO
+P TEAM CARD FIX - PREVENT STRETCHING */
+@media (min-width: 769px) {
+    .team_card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        width: 300px !important;
+    }
+    
+    .team_cards_wrapper {
+        cursor: grab !important;
+    }
+    
+    .team_cards_wrapper:active {
+        cursor: grabbing !important;
+    }
+}
+
+/* TABLET SIZING - Same as desktop */
+@media (min-width: 481px) and (max-width: 768px) {
+    .team_card {
+        flex: 0 0 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        width: 300px !important;
+    }
+}/* DESK
+TOP SMOOTH SCROLLING OPTIMIZATIONS */
+@media (min-width: 769px) {
+    .team_cards_wrapper {
+        /* Enhanced smooth scrolling for desktop */
+        scroll-behavior: smooth !important;
+        scroll-padding: 0 20px !important;
+        
+        /* Performance optimizations */
+        will-change: scroll-position !important;
+        transform: translate3d(0, 0, 0) !important;
+        
+        /* Smoother scrollbar */
+        scrollbar-width: thin !important;
+        scrollbar-color: #dc143c rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    /* Smooth scrollbar for webkit browsers */
+    .team_cards_wrapper::-webkit-scrollbar {
+        height: 8px !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 10px !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #dc143c, #ff4569) !important;
+        border-radius: 10px !important;
+        transition: background 0.3s ease !important;
+    }
+    
+    .team_cards_wrapper::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, #ff4569, #dc143c) !important;
+    }
+    
+    /* Optimize team cards for smooth scrolling */
+    .team_card {
+        /* Remove transitions during scroll for better performance */
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        
+        /* Hardware acceleration */
+        transform: translate3d(0, 0, 0) !important;
+        backface-visibility: hidden !important;
+    }
+}

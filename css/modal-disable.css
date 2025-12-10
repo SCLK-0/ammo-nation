@@ -1,0 +1,127 @@
+/* Modal Background Disable Styles */
+
+/* Full screen overlay that blocks everything */
+body.modal-open-disable-bg::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999998; /* Very high to be above all menu items */
+    pointer-events: auto; /* Block ALL interactions */
+    cursor: not-allowed;
+}
+
+/* Ensure modals are above the overlay */
+.popup_wrap {
+    z-index: 999999 !important;
+    position: fixed !important;
+}
+
+/* Simple approach - overlay blocks everything, modal is above it */
+
+/* Re-enable pointer events for modal elements */
+body.modal-open-disable-bg .popup_wrap,
+body.modal-open-disable-bg .popup_wrap * {
+    pointer-events: auto !important;
+}
+
+/* Visual indication that background is disabled */
+body.modal-open-disable-bg .top_panel_wrap,
+body.modal-open-disable-bg .header_mobile {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Prevent scrolling when modal is open */
+body.modal-open-disable-bg {
+    overflow: hidden;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+    body.modal-open-disable-bg .header_mobile {
+        pointer-events: none;
+    }
+    
+    body.modal-open-disable-bg .side_wrap {
+        pointer-events: none;
+    }
+    
+    /* Ensure mobile menu closes when modal opens */
+    body.modal-open-disable-bg .side_wrap.open {
+        transform: translateX(-100%) !important;
+        opacity: 0 !important;
+    }
+    
+    body.modal-open-disable-bg .mask.show {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
+
+/* Desktop specific fixes */
+@media (min-width: 769px) {
+    body.modal-open-disable-bg .top_panel_top,
+    body.modal-open-disable-bg .top_panel_middle,
+    body.modal-open-disable-bg .top_panel_bottom {
+        pointer-events: none;
+    }
+    
+    /* Dim the top panel elements */
+    body.modal-open-disable-bg .top_panel_top_user_area a:not(.popup_link),
+    body.modal-open-disable-bg .top_panel_cart_button,
+    body.modal-open-disable-bg .menu_main_nav a,
+    body.modal-open-disable-bg .search_wrap {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+/* Ensure popup links remain functional */
+.popup_link {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+/* Style for disabled elements */
+[data-disabled-by-modal="true"] {
+    cursor: not-allowed !important;
+    user-select: none !important;
+}/* Hide Remember Me checkbox and label */
+.popup_form_field.remember_field input[type="checkbox"],
+.popup_form_field.remember_field label[for="rememberme"],
+.popup_form_field.remember_field label[for="rememberme_1"] {
+    display: none !important;
+}
+
+/* Keep forgot password link visible and properly positioned */
+.popup_form_field.remember_field {
+    text-align: right !important;
+}
+
+.popup_form_field.remember_field .forgot_password {
+    display: inline-block !important;
+}/
+* Force menu items to be below overlay */
+body.modal-open-disable-bg .top_panel_wrap,
+body.modal-open-disable-bg .header_mobile,
+body.modal-open-disable-bg .menu_main_nav,
+body.modal-open-disable-bg .top_panel_top,
+body.modal-open-disable-bg .top_panel_middle,
+body.modal-open-disable-bg .top_panel_bottom {
+    z-index: 1 !important;
+    position: relative !important;
+}
+
+/* Force all navigation elements to low z-index */
+body.modal-open-disable-bg .menu_main_nav li,
+body.modal-open-disable-bg .menu_main_nav a,
+body.modal-open-disable-bg .top_panel_cart_button,
+body.modal-open-disable-bg .logo,
+body.modal-open-disable-bg .search_wrap {
+    z-index: 1 !important;
+    position: relative !important;
+}
