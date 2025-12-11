@@ -1972,6 +1972,16 @@ body.menu_mobile .header_mobile {
 body.menu_mobile .top_panel_wrap {
 	display: none;
 }
+
+/* Temporary fix - force mobile header to show on small screens */
+@media (max-width: 1024px) {
+	.header_mobile {
+		display: block !important;
+	}
+	.top_panel_wrap {
+		display: none !important;
+	}
+}
 .header_mobile .top_panel_fixed_wrap {
     display: none;
 }
