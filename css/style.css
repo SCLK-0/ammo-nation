@@ -2126,35 +2126,101 @@ li.opened > a > .open_child_menu:before {
 	}
 }
 
-/* Fix team cards container to show full cards without cropping */
+/* Fix team cards container scrollbar to match swipe area */
 .team_cards_container {
-	overflow: visible !important;
+	overflow: hidden !important;
 	width: 100% !important;
-	max-width: none !important;
+	max-width: 100% !important;
+	position: relative !important;
 }
 
 .team_cards_wrapper {
 	overflow-x: auto !important;
 	overflow-y: visible !important;
-	padding: 20px 20px 40px 20px !important;
-	width: calc(100% + 40px) !important;
-	margin-left: -20px !important;
+	padding: 20px 0 40px 0 !important;
+	width: 100% !important;
+	margin: 0 !important;
 }
 
 .team_card {
 	flex-shrink: 0 !important;
-	margin: 0 10px !important;
+	margin: 0 15px !important;
+}
+
+.team_card:first-child {
+	margin-left: 20px !important;
+}
+
+.team_card:last-child {
+	margin-right: 20px !important;
 }
 
 @media (max-width: 768px) {
 	.team_cards_wrapper {
-		padding: 15px 15px 30px 15px !important;
-		width: calc(100% + 30px) !important;
-		margin-left: -15px !important;
+		padding: 15px 0 30px 0 !important;
 	}
 	
 	.team_card {
-		margin: 0 5px !important;
+		margin: 0 10px !important;
+	}
+	
+	.team_card:first-child {
+		margin-left: 15px !important;
+	}
+	
+	.team_card:last-child {
+		margin-right: 15px !important;
+	}
+	
+	/* Move mobile header logo slightly to the right */
+	.header_mobile .logo {
+		padding-left: 10px !important;
+	}
+	
+	/* Product single page - clean image display on mobile */
+	.single-product .post_featured,
+	.single-product .woocommerce-product-gallery,
+	.single-product .woocommerce-product-gallery__wrapper,
+	.single-product .woocommerce-product-gallery__image {
+		background: none !important;
+		border: none !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+		margin: 0 auto !important;
+		text-align: center !important;
+	}
+	
+	.single-product .post_featured img,
+	.single-product .woocommerce-product-gallery img,
+	.single-product .woocommerce-product-gallery__image img {
+		border: none !important;
+		box-shadow: none !important;
+		background: none !important;
+		padding: 0 !important;
+		margin: 0 auto !important;
+		display: block !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+	
+	/* Center product title on mobile */
+	.single-product .post_title,
+	.single-product .product_title,
+	.single-product h1.entry-title,
+	.single-product .woocommerce-loop-product__title {
+		text-align: center !important;
+		margin: 20px auto !important;
+	}
+	
+	/* Center product price on mobile */
+	.single-product .price,
+	.single-product .woocommerce-Price-amount,
+	.single-product .amount,
+	.single-product p.price,
+	.single-product .woocommerce-price-suffix {
+		text-align: center !important;
+		display: block !important;
+		margin: 15px auto !important;
 	}
 }
 .header_mobile .top_panel_fixed_wrap {
