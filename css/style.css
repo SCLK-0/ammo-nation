@@ -1964,7 +1964,9 @@ li.opened > a > .open_child_menu:before {
 	position: relative; 
     z-index: 10003;	
 	display: block !important;
-    background-color: #1D1E23;
+    background-color: red !important;
+    height: 100px !important;
+    width: 100% !important;
 }
 body.menu_mobile .header_mobile {
 	display: block;
@@ -1986,6 +1988,11 @@ body.menu_mobile .top_panel_wrap {
 /* Test - make mobile header always visible */
 .top_panel_wrap {
 	display: none !important;
+}
+
+/* CSS Test - this should make the body background red */
+body {
+	background-color: red !important;
 }
 .header_mobile .top_panel_fixed_wrap {
     display: none;
