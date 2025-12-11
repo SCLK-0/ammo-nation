@@ -23,7 +23,6 @@
 
         <link rel="stylesheet" href="css/skin.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="css/mobile-fix.css?v=1.1" type="text/css" media="all" />
         <link rel="stylesheet" href="css/youtube-thumbnail.css" type="text/css" media="all" />
 
         <link rel="stylesheet" href="css/messages.css" type="text/css" media="all" />
@@ -31,7 +30,7 @@
 
         <link rel="icon" href="images/fab.png" sizes="32x32" />
         <link rel="icon" href="images/fab.png" sizes="192x192" />
-        <link rel="apple-touch-icon-precomposed" href="http://placehold.it/180x180.jpg" />
+        <link rel="apple-touch-icon-precomposed" href="images/fab.png" />
 
     </head>
 
@@ -737,35 +736,6 @@
                                         <div class="post_featured">
                                             <div class="post_thumb">
                                                 <a class="hover_icon hover_icon_link" href="post-single.html">
-                                                    <img alt="" src="images/image-21-370x355.jpg">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="post_content isotope_item_content">
-                                            <h5 class="post_title">
-                                                <a href="post-single.html">10 Best Rimfire Guns Right Now</a>
-                                            </h5>
-                                            <div class="post_info">
-                                                <span class="post_info_item">Posted
-                                                    <a href="#" class="post_info_date">June 6, 2024</a>
-                                                </span>
-                                            </div>
-                                            <div class="post_descr">
-                                                <p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum...</p>
-                                                <a href="post-single.html" class="post_readmore">
-                                                    <span class="post_readmore_label">Read more</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <!-- /Post item -->
-                                <!-- Post item -->
-                                <div class="isotope_item isotope_item_masonry isotope_item_masonry_2 isotope_column_2">
-                                    <article class="post_item post_item_masonry post_item_masonry_2">
-                                        <div class="post_featured">
-                                            <div class="post_thumb">
-                                                <a class="hover_icon hover_icon_link" href="post-single.html">
                                                     <img alt="" src="images/image-20-370x247.jpg">
                                                 </a>
                                             </div>
@@ -781,6 +751,35 @@
                                             </div>
                                             <div class="post_descr">
                                                 <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo...</p>
+                                                <a href="post-single.html" class="post_readmore">
+                                                    <span class="post_readmore_label">Read more</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- /Post item -->
+                                <!-- Post item -->
+                                <div class="isotope_item isotope_item_masonry isotope_item_masonry_2 isotope_column_2">
+                                    <article class="post_item post_item_masonry post_item_masonry_2">
+                                        <div class="post_featured">
+                                            <div class="post_thumb">
+                                                <a class="hover_icon hover_icon_link" href="post-single.html">
+                                                    <img alt="" src="images/image-21-370x355.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="post_content isotope_item_content">
+                                            <h5 class="post_title">
+                                                <a href="post-single.html">10 Best Rimfire Guns Right Now</a>
+                                            </h5>
+                                            <div class="post_info">
+                                                <span class="post_info_item">Posted
+                                                    <a href="#" class="post_info_date">June 6, 2024</a>
+                                                </span>
+                                            </div>
+                                            <div class="post_descr">
+                                                <p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum...</p>
                                                 <a href="post-single.html" class="post_readmore">
                                                     <span class="post_readmore_label">Read more</span>
                                                 </a>
@@ -1217,6 +1216,37 @@
         <script type="text/javascript" src="js/youtube-fix.js"></script>
         <script type="text/javascript" src="js/footer-alignment-fix.js"></script>
 
+        <!-- TRUE MASONRY LAYOUT FIX -->
+        <style>
+        .isotope_wrap {
+            display: block !important;
+            columns: 2 !important;
+            column-gap: 20px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .isotope_item {
+            display: inline-block !important;
+            width: 100% !important;
+            margin-bottom: 20px !important;
+            break-inside: avoid !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .post_item {
+            height: auto !important;
+            break-inside: avoid !important;
+        }
+        
+        @media (max-width: 768px) {
+            .isotope_wrap {
+                columns: 1 !important;
+            }
+        }
+        </style>
+        
         <script type="text/javascript" src="js/vendor/isotope/dist/isotope.pkgd.min.js"></script>
 
     </body>

@@ -198,41 +198,130 @@
     }
 }
 
-/* FORCE IMAGE TO SHOW - SIMPLE FIX */
+/* FORCE CZ SHADOW IMAGE TO SHOW - MOBILE ONLY */
 @media (max-width: 768px) {
-    .woocommerce-product-gallery__image img {
-        background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        min-height: 200px !important;
-        width: 100% !important;
-        height: 200px !important;
-    }
-    
-    /* If image doesn't load, show background */
+    /* ULTIMATE FALLBACK - Show image no matter what */
     .woocommerce-product-gallery__image {
+        background: #f9f9f9 url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') no-repeat center center !important;
+        background-size: contain !important;
+        min-height: 300px !important;
+        width: 100% !important;
+        display: block !important;
+        visibility: visible !important;
+        border: 2px solid #ddd !important;
+        border-radius: 8px !important;
+        position: relative !important;
+    }
+    
+    /* Try with absolute path */
+    .woocommerce-product-gallery__image {
+        background-image: url('/images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+    }
+    
+    /* Show mobile fallback if main image fails */
+    .mobile-image-fallback {
+        display: block !important;
+        width: 100% !important;
+        min-height: 250px !important;
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+    /* Target the specific product gallery image */
+    .woocommerce-product-gallery__image img[src*="259bc57ecbcf1aedc64600e7fb3786ee"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Fallback background image for the container */
+    .woocommerce-product-gallery__image[data-thumb*="259bc57ecbcf1aedc64600e7fb3786ee"] {
         background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
         background-size: contain !important;
         background-repeat: no-repeat !important;
         background-position: center !important;
-        min-height: 200px !important;
+        min-height: 250px !important;
+        width: 100% !important;
+        display: block !important;
+        visibility: visible !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        background-color: #f9f9f9 !important;
     }
     
-    /* Nuclear option - force content */
+    /* Alternative path - try without ../ */
+    .woocommerce-product-gallery__image[data-thumb*="259bc57ecbcf1aedc64600e7fb3786ee"] {
+        background-image: url('images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+    }
+    
+    /* Force the gallery wrapper to be visible */
+    .woocommerce-product-gallery__wrapper {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+    }
+    
+    /* Ensure the main gallery container is visible */
+    .woocommerce-product-gallery {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        margin-bottom: 20px !important;
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Nuclear option - add pseudo-element with image */
+    .woocommerce-product-gallery__image::after {
+        content: '';
+        display: block !important;
+        width: 100% !important;
+        height: 250px !important;
+        background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        position: relative !important;
+        z-index: 1 !important;
+        border-radius: 4px !important;
+    }
+    
+    /* Try alternative path for pseudo-element */
     .woocommerce-product-gallery__image::before {
         content: '';
         display: block !important;
         width: 100% !important;
-        height: 200px !important;
-        background-image: url('../images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
+        height: 250px !important;
+        background-image: url('images/259bc57ecbcf1aedc64600e7fb3786ee.jpg') !important;
         background-size: contain !important;
         background-repeat: no-repeat !important;
         background-position: center !important;
         position: absolute !important;
         top: 0 !important;
         left: 0 !important;
-        z-index: 1 !important;
+        z-index: 2 !important;
+        border-radius: 4px !important;
     }
 }
 

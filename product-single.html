@@ -26,7 +26,6 @@
 
         <link rel="stylesheet" href="css/skin.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="css/mobile-fix.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/modal-disable.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/youtube-thumbnail.css" type="text/css" media="all" />
 
@@ -35,7 +34,7 @@
 
         <link rel="icon" href="images/fab.png" sizes="32x32" />
         <link rel="icon" href="images/fab.png" sizes="192x192" />
-        <link rel="apple-touch-icon-precomposed" href="http://placehold.it/180x180.jpg" />
+        <link rel="apple-touch-icon-precomposed" href="images/fab.png" />
 
     </head>
     <body class="single-product woocommerce woocommerce-page body_transparent article_style_stretch scheme_original top_panel_show top_panel_above sidebar_hide">
@@ -563,9 +562,12 @@
                                         <figure class="woocommerce-product-gallery__wrapper">
                                             <div data-thumb="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" class="woocommerce-product-gallery__image">
                                                 <a href="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg">
-                                                    <img src="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" alt="CZ Shadow 2" title="CZ Shadow 2" data-src="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" data-large_image="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" data-large_image_width="640" data-large_image_height="640" />
+                                                    <img src="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" alt="CZ Shadow 2" title="CZ Shadow 2" data-src="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" data-large_image="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" data-large_image_width="640" data-large_image_height="640" style="display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; height: auto !important;" />
                                                 </a>
-
+                                                <!-- Mobile fallback image -->
+                                                <div class="mobile-image-fallback" style="display: none;">
+                                                    <img src="images/259bc57ecbcf1aedc64600e7fb3786ee.jpg" alt="CZ Shadow 2" style="width: 100%; height: auto; min-height: 250px; object-fit: contain; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 10px; box-sizing: border-box;" />
+                                                </div>
                                             </div>
                                         </figure>
                                     </div>
