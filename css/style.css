@@ -1975,6 +1975,188 @@ li.opened > a > .open_child_menu:before {
 		display: none;
 	}
 }
+
+/* Fix post thumbnail cropping on mobile */
+@media (max-width: 768px) {
+	.post_featured {
+		overflow: visible !important;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	
+	.post_featured img {
+		width: 100% !important;
+		height: auto !important;
+		max-width: 100%;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.post_thumb {
+		overflow: visible !important;
+		width: 100% !important;
+		height: auto !important;
+		text-align: center;
+	}
+	
+	.post_thumb img {
+		width: 100% !important;
+		height: auto !important;
+		max-width: 100%;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	/* Fix isotope post items on mobile */
+	.isotope_wrap .isotope_item .post_featured {
+		margin-bottom: 1em;
+		overflow: visible !important;
+		text-align: center;
+	}
+	
+	/* Center the entire post item on mobile */
+	.isotope_wrap .isotope_item {
+		text-align: center;
+		margin: 0 auto 20px auto;
+	}
+	
+	/* Center post content */
+	.post_content {
+		text-align: center;
+	}
+	
+	/* Center YouTube thumbnail container on mobile */
+	.youtube-thumbnail-container {
+		margin: 0 auto !important;
+		text-align: center;
+		display: block;
+	}
+	
+	.post_thumb .youtube-thumbnail-container,
+	.post_featured .youtube-thumbnail-container {
+		margin: 0 auto !important;
+		text-align: center;
+	}
+}
+
+/* Center shop page controls on mobile */
+@media (max-width: 768px) {
+	.mode_buttons,
+	.list_products .mode_buttons,
+	div.mode_buttons {
+		display: none !important;
+		visibility: hidden !important;
+	}
+	
+	.woocommerce-result-count {
+		text-align: center !important;
+		display: block !important;
+		margin: 10px auto !important;
+		float: none !important;
+		width: 100% !important;
+	}
+	
+	.woocommerce-ordering,
+	form.woocommerce-ordering,
+	.list_products .woocommerce-ordering {
+		text-align: center !important;
+		display: inline-block !important;
+		margin: 10px auto !important;
+		float: none !important;
+		width: 150px !important;
+		max-width: 150px !important;
+		padding: 0 !important;
+		box-sizing: border-box !important;
+	}
+	
+	.woocommerce-ordering select.orderby,
+	.woocommerce-ordering select,
+	form.woocommerce-ordering select.orderby {
+		margin: 0 !important;
+		display: block !important;
+		width: 100% !important;
+		max-width: 150px !important;
+		min-width: 150px !important;
+		box-sizing: border-box !important;
+	}
+	
+	/* Center the entire shop controls container */
+	.list_products {
+		text-align: center !important;
+	}
+	
+	.list_products > * {
+		float: none !important;
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	
+	/* Reduce padding-top for shop page content on mobile */
+	.page_content_wrap.page_paddings_yes {
+		padding-top: 20px !important;
+	}
+	
+	/* Reduce padding-bottom for product items on mobile */
+	.product.column-1_3,
+	.product.column-1_3.first,
+	li.product.column-1_3,
+	li.product.column-1_3.first {
+		padding-bottom: 10px !important;
+		margin-bottom: 15px !important;
+	}
+	
+	/* Center mobile swipe indicator */
+	.mobile-swipe-indicator {
+		text-align: center !important;
+		display: block !important;
+		margin: 0 auto !important;
+		width: 100% !important;
+	}
+	
+	/* Center Learn More button on mobile */
+	.sc_button.sc_button_style_dark {
+		display: block !important;
+		margin: 10px auto !important;
+		text-align: center !important;
+		width: auto !important;
+		max-width: 200px !important;
+	}
+}
+
+/* Fix team cards container to show full cards without cropping */
+.team_cards_container {
+	overflow: visible !important;
+	width: 100% !important;
+	max-width: none !important;
+}
+
+.team_cards_wrapper {
+	overflow-x: auto !important;
+	overflow-y: visible !important;
+	padding: 20px 20px 40px 20px !important;
+	width: calc(100% + 40px) !important;
+	margin-left: -20px !important;
+}
+
+.team_card {
+	flex-shrink: 0 !important;
+	margin: 0 10px !important;
+}
+
+@media (max-width: 768px) {
+	.team_cards_wrapper {
+		padding: 15px 15px 30px 15px !important;
+		width: calc(100% + 30px) !important;
+		margin-left: -15px !important;
+	}
+	
+	.team_card {
+		margin: 0 5px !important;
+	}
+}
 .header_mobile .top_panel_fixed_wrap {
     display: none;
 }
