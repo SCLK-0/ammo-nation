@@ -1966,20 +1966,13 @@ li.opened > a > .open_child_menu:before {
 	display: none;
     background-color: #1D1E23;
 }
-body.menu_mobile .header_mobile {
-	display: block;
-}
-body.menu_mobile .top_panel_wrap {
-	display: none;
-}
 
-/* Mobile header responsive CSS */
 @media (max-width: 1024px) {
 	.header_mobile {
-		display: block !important;
+		display: block;
 	}
 	.top_panel_wrap {
-		display: none !important;
+		display: none;
 	}
 }
 .header_mobile .top_panel_fixed_wrap {
